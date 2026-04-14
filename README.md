@@ -102,4 +102,3 @@ The `MenuItem` data model represents information about menu items available in t
    ```bash
    npm install
 
-   shruti
