@@ -1,7 +1,8 @@
+require('dotenv').config();
 const express = require('express')
 const app = express();
 const db = require('./db');
-require('dotenv').config();
+
 const passport = require('./auth');
 
 const bodyParser = require('body-parser'); 

@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const MenuItem = require('./../models/MenuItem');
+const { jwtAuthMiddleware } = require('./../jwt');
 
 // POST Method to add a Menu Item
-router.post('/', async (req, res) =>{
+router.post('/', jwtAuthMiddleware , async (req, res) =>{
     try{
         const data = req.body
         const newMenu = new MenuItem(data);
